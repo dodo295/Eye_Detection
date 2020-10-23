@@ -31,7 +31,7 @@ AND you can build your model using 'Eye_Detection_Using_Facial_Landmks.py'
 
 
 # Examples
-. Detect all faces using Haar Cascade Classifiers using OpenCV
-. Detect Center Eye keypoint with a Convolutional Neural Network
+Detect all faces using Haar Cascade Classifiers using OpenCV.
+Detect Center Eye keypoint with a Convolutional Neural Network.
 
 
