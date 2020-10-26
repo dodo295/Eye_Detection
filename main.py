@@ -15,6 +15,7 @@ from keras.models import load_model
 # If the input is the camera, pass 0 instead of the video file name        
 face_cascade=cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
+model = load_model('model_1_Eye.h5')
 cap = cv2.VideoCapture(0)
 # Check if camera opened successfully
 if (cap.isOpened()== False):
@@ -41,7 +42,6 @@ while(cap.isOpened()):
               print("no eyes detected")
           resize_gray_crop = cv2.resize(gray_crop, (96, 96)) / 255.0
           
-          model = load_model('model_1_Eye.h5')
           landmarks = model.predict(resize_gray_crop.reshape(1,96,96,1))[0]
           d1= ((landmarks[0::2])* np.float32(orig_shape_crop[0])/96.0) + +np.float32(x)
           d2= ((landmarks[1::2])* np.float32(orig_shape_crop[1])/96.0) + +np.float32(y)
