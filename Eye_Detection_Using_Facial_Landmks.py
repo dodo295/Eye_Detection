@@ -129,6 +129,7 @@ model_1.evaluate(X_test, y_test, verbose = 1)
 def plot_keypoints(img_path, face_cascade_path, model_path, scale=1.1, neighbors=6, key_size=10):
     
     face_cascade=cv2.CascadeClassifier(face_cascade_path) 
+    model = load_model(model_path)
     img = cv2.imread(img_path)
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     faces = face_cascade.detectMultiScale(gray, scale, neighbors)
@@ -151,7 +152,7 @@ def plot_keypoints(img_path, face_cascade_path, model_path, scale=1.1, neighbors
         orig_shape_crop = bgr_crop.shape
         gray_crop = cv2.cvtColor(bgr_crop, cv2.COLOR_BGR2GRAY)
         resize_gray_crop = cv2.resize(gray_crop, (96, 96)) / 255.0
-        model = load_model(model_path)
+        
         landmarks = model.predict(resize_gray_crop.reshape(1,96,96,1))[0]
         ax.scatter(((landmarks[0::2] )*orig_shape_crop[0]/96)+x, 
                    ((landmarks[1::2] )*orig_shape_crop[1]/96)+y, 
