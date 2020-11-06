@@ -7,8 +7,7 @@ The objective of this project is to predict Eye positions on face images and vid
 - This can be used as a building block in several applications, such as: tracking Eye in images and video.
 
 # Dataset
-This is a Keypoint Face Detection dataset from Kaggle uploaded to allow the kernel to work on it.
-https://www.kaggle.com/drgilermo/face-images-with-marked-landmark-points
+This is a Keypoint Face Detection dataset from Kaggle uploaded to allow the kernel to work on it.[Click here](https://www.kaggle.com/drgilermo/face-images-with-marked-landmark-points)
 
 - The dataset contains 7049 facial images and up to 15 keypoints marked on them.
 
@@ -19,7 +18,7 @@ https://www.kaggle.com/drgilermo/face-images-with-marked-landmark-points
 
 # Output
 
-- The output is a file saved in 'model_1_Eye. h5' and reach accurecy (0.9936034083366394)
+- The output is a file saved in **model_1_Eye.h5** and reach **Accurecy 99.36%**
 
 
 # How to run
@@ -29,7 +28,7 @@ https://www.kaggle.com/drgilermo/face-images-with-marked-landmark-points
 
       python3 main.py
 
-AND you can build your model using **Eye_Detection_Using_Facial_Landmks.py**
+- [x] AND you can build your model using **Eye_Detection_Using_Facial_Landmks.py**
 
 # Examples
 - Detect all faces using Haar Cascade Classifiers using OpenCV.
